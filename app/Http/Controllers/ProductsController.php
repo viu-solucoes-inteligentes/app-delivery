@@ -126,7 +126,6 @@ class ProductsController extends Controller
         $product = $this->repository->find($id);
         return view('products.show', compact('product'));
     }
-
     /**
      * Show the form for editing the specified resource.
      *
