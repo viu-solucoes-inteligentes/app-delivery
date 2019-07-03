@@ -121,11 +121,11 @@
             </span>
                         </a>
                         <ul class="treeview-menu" style="">
-                            <li><a href="index.html"><i class="fa fa-circle-o"></i> Usuários</a></li>
-                            <li class="active"><a href="{{ route('clients')  }}"><i class="fa fa-circle-o"></i> Clientes</a>
-                            <li class="active"><a href="{{ route('categories')  }}"><i class="fa fa-circle-o"></i>
+                            <li><a href="{{ route('users')  }}"><i class="fa fa-circle-o"></i> Usuários</a></li>
+                            <li><a href="{{ route('clients')  }}"><i class="fa fa-circle-o"></i> Clientes</a>
+                            <li><a href="{{ route('categories')  }}"><i class="fa fa-circle-o"></i>
                                     Categorias</a>
-                            <li class="active"><a href="{{ route('products')  }}"><i class="fa fa-circle-o"></i>
+                            <li><a href="{{ route('products')  }}"><i class="fa fa-circle-o"></i>
                                     Produtos</a>
                             </li>
                         </ul>
