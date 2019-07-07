@@ -1,7 +1,6 @@
 {
     "name": "app-delivery",
     "scripts": {
-        "postdeploy": "composer update && php artisan migrate:refresh --seed"
     },
     "env": {
     "APP_ENV": {
