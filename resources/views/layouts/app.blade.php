@@ -156,6 +156,6 @@
 </body>
 
 <!-- Scripts -->
-<script src="{{ (env('APP_ENV') === 'local') ? mix('js/app.js') : asset('js/app.js') }}" defer></script>
+<script src="{{ (env('APP_ENV') === 'local') ? mix('appapp.json) : asset('app.app.json }}" defer></script>
 
 </html>
