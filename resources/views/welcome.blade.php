@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel 5.7.1
+                    Laravel Forked version 5.7
                 </div>
 
                 <div class="links">
