@@ -121,3 +121,20 @@ Route::group([
     Route::post('/search', 'ClientsController@search')->name('.search');
 });
 
+
+Route::group([
+    'prefix' => 'orders',
+    'as' => 'orders',
+    'middleware' => 'auth'
+], function () {
+
+    Route::get('/', 'OrdersController@index')->name('');
+    Route::get('/create', 'OrdersController@create')->name('.create');
+    Route::get('/{id}', 'OrdersController@show')->name('.show');
+    Route::get('/{id}/edit', 'OrdersController@edit')->name('.edit');
+    Route::delete('/{id}', 'OrdersController@destroy')->name('.destroy');
+    Route::put('/{id}', 'OrdersController@update')->name('.update');
+    Route::post('', 'OrdersController@store')->name('.store');
+    Route::post('/search', 'OrdersController@search')->name('.search');
+});
+

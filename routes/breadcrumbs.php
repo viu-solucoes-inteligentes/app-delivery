@@ -133,3 +133,34 @@ Breadcrumbs::for('clients.show', function ($trail, $user) {
     $trail->push('Show', route('clients.show', $user));
 });
 
+
+
+
+
+
+//// Home > Orders
+Breadcrumbs::for('orders', function ($trail) {
+    $trail->parent('home');
+    $trail->push('Ordens', route('orders'));
+});
+
+
+// Home > Clients > New
+Breadcrumbs::for('orders.create', function ($trail) {
+    $trail->parent('orders');
+    $trail->push('New', route('orders.create'));
+});
+
+// Home > Clients > Edit
+Breadcrumbs::for('orders.edit', function ($trail, $user) {
+    $trail->parent('orders');
+    $trail->push('Edit', route('orders.edit', $user));
+});
+
+
+// Home > Clients > Show
+Breadcrumbs::for('orders.show', function ($trail, $user) {
+    $trail->parent('orders');
+    $trail->push('Show', route('orders.show', $user));
+});
+

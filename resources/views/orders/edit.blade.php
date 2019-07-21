@@ -3,21 +3,21 @@
 @section('body')
     <section class="content-header">
         <h1>
-            Produtos
+            Orderns
         </h1>
-        {{ \Breadcrumbs::render('products.edit', $product) }}
+        {{ \Breadcrumbs::render('orders.edit', $order) }}
     </section>
     <!-- Main content -->
     <section class="content">
         <div class="row">
-            @include('products._tools')
+            @include('orders._tools')
             <div class="col-md-9">
                 @include('includes.messages')
 
                 <h2><span class="glyphicon glyphicon-list-alt"></span> Formulário de edição</h2>
-                {!! Form::model( $product,[
-                    'route' => ['products.update', 'product' => $product->id],
-                    'method' => 'PUT', 'enctype'=>'multipart/form-data'])
+                {!! Form::model( $order,[
+                    'route' => ['orders.update', 'orders' => $order->id],
+                    'method' => 'PUT'])
                 !!}
 
                 <div class="nav-tabs-custom">
@@ -34,50 +34,39 @@
                     <div class="tab-content">
                         <div class="tab-pane active" id="activity">
                             <div class="row">
+                                <div class="col-md-9">
+                                    <div class="form-group {{ $errors->first('user_id') ? 'has-error' : ''  }} ">
+                                        {{ Form::label('user_id', 'Usuário:* ') }}
+                                        {{ Form::select('user_id', $users, $order->user_id,  ['class' => 'form-control', 'required', 'placeholder' => 'Selecione uma opção']) }}
+                                        <span class="help-block">
+                                                <strong>{{ $errors->first('user_id') }}</strong>
+                                            </span>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group {{ $errors->first('status') ? 'has-error' : ''  }} ">
+                                        {{ Form::label('status', 'Status:* ') }}
+                                        {{  Form::select('status',['ON' => 'ON', 'OFF' => 'OFF'] , null,  ['class' => 'form-control', 'required',  'placeholder' => 'Selecione uma opção'])  }}
+                                        <span class="help-block">
+                                                <strong>{{ $errors->first('status') }}</strong>
+                                            </span>
+                                    </div>
+                                </div>
+
+
                                 <div class="col-md-12">
-                                    <div class="form-group {{ $errors->first('name') ? 'has-error' : ''  }} ">
-                                        {{ Form::label('name', 'Nome:') }}
-                                        {{ Form::text('name', null, ['class' => 'form-control', 'required']) }}
+                                    <div class="form-group {{ $errors->first('product_id') ? 'has-error' : ''  }} ">
+                                        {{ Form::label('product_id', 'Produto:* ') }}
+                                        {{ Form::select('product_id', $products, $order->product_id,  ['class' => 'form-control', 'required', 'placeholder' => 'Selecione uma opção']) }}
                                         <span class="help-block">
-                                                <strong>{{ $errors->first('name') }}</strong>
-                                            </span>
-
-                                    </div>
-                                </div>
-
-                                <div class="col-md-12">
-                                    <div class="form-group {{ $errors->first('category_id') ? 'has-error' : ''  }} ">
-                                        {{ Form::label('category_id', 'Categoria:* ') }}
-                                        {{ Form::select('category_id', $categories, $product->category_id,  ['class' => 'form-control', 'required', 'placeholder' => 'Selecione uma opção']) }}
-                                        <span class="help-block">
-                                                <strong>{{ $errors->first('category_id') }}</strong>
-                                            </span>
-
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group {{ $errors->first('price') ? 'has-error' : ''  }} ">
-                                        {{ Form::label('price', 'Preço:* ') }}
-                                        {{ Form::text('price', null, ['class' => 'form-control', 'required']) }}
-                                        <span class="help-block">
-                                                <strong>{{ $errors->first('price') }}</strong>
-                                            </span>
-
-                                    </div>
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="form-group {{ $errors->first('image') ? 'has-error' : ''  }} ">
-                                        {{ Form::label('image', 'Imagem:* ') }}
-                                        {{ Form::file('image', null, ['class' => 'form-control']) }}
-                                        <span class="help-block">
-                                                <strong>{{ $errors->first('image') }}</strong>
+                                                <strong>{{ $errors->first('product_id') }}</strong>
                                             </span>
 
                                     </div>
                                 </div>
                             </div>
                         </div>
-
 
 
                         <div class="tab-pane" id="tab2">

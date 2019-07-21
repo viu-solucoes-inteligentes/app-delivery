@@ -17,6 +17,7 @@
         "laravel/framework": "5.7.*",
         "laravel/tinker": "^1.0",
         "laravelcollective/html": "^5.7.1",
+        "league/flysystem-aws-s3-v3": "^1.0",
         "league/fractal": "^0.18.0",
         "prettus/l5-repository": "^2.6"
     },

@@ -15,6 +15,7 @@ use ApiDelivery\Http\Requests\ProductCreateRequest;
 use ApiDelivery\Http\Requests\ProductUpdateRequest;
 use ApiDelivery\Repositories\ProductRepository;
 use ApiDelivery\Validators\ProductValidator;
+use Storage;
 
 /**
  * Class ProductsController.
@@ -92,11 +93,10 @@ class ProductsController extends Controller
 
             if($request->hasFile('image') && $request->file('image')->isValid()){
                 $upload = $request->file('image');
-
-                $product['filename'] = uniqid(date('HisYmd')) . '.'. $upload->getClientOriginalExtension();
+                $s3 = $upload->store('uploads');
+                $product['filename'] = $s3;
                 $product['filetype'] = $upload->getMimeType();
                 $product['filesize'] = $upload->getClientSize();
-                $upload->storeAs('uploads', $product['filename']);
             }
 
             $product['name'] = $request->get('name');
@@ -158,10 +158,17 @@ class ProductsController extends Controller
 
             if($request->hasFile('image') && $request->file('image')->isValid()){
                 $upload = $request->file('image');
-                $product['filename'] = uniqid(date('HisYmd')) . '.'. $upload->getClientOriginalExtension();
+//                $product['filename'] = uniqid(date('HisYmd')) . '.'. $upload->getClientOriginalExtension();
+//                $product['filetype'] = $upload->getMimeType();
+//                $product['filesize'] = $upload->getClientSize();
+                $s3 = $upload->store('uploads');
+                $product['filename'] = $s3;
                 $product['filetype'] = $upload->getMimeType();
                 $product['filesize'] = $upload->getClientSize();
-                $upload->storeAs('uploads', $product['filename']);
+
+                //$upload->storeAs('uploads', $product['filename']);
+                //Storage::disk('s3')->put('images/originals', fopen($upload, 'r+'), 'images');
+
             }
 
             $product['name'] = $request->get('name');

@@ -4,7 +4,7 @@ namespace ApiDelivery\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ProductUpdateRequest extends FormRequest
+class OrderUpdateRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,10 +24,9 @@ class ProductUpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required',
-            'price' => 'required',
-            'category_id' => 'required',
-            'image' => 'required'// 'mimes:jpeg,bmp,png|max:2048'
+            'user_id'=> 'required',
+            'product_id'=> 'required',
+            'status'=> 'required',
         ];
     }
 }

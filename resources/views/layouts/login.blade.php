@@ -26,6 +26,7 @@
 <div id="app">
     @yield('body')
 </div>
-<script src="{{ (env('APP_ENV') === 'local') ? mix('appapp.json) : asset('app.app.json }}" defer></script>
+
+<script src="{{ (env('APP_ENV') === 'local') ? mix('js/app.js') : asset('js/app.js') }}" defer></script>
 </body>
 </html>

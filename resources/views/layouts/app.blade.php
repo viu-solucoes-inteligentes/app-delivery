@@ -128,6 +128,9 @@
                             <li><a href="{{ route('products')  }}"><i class="fa fa-circle-o"></i>
                                     Produtos</a>
                             </li>
+                            <li><a href="{{ route('orders')  }}"><i class="fa fa-circle-o"></i>
+                                    Pedidos</a>
+                            </li>
                         </ul>
                     </li>
 
@@ -156,6 +159,6 @@
 </body>
 
 <!-- Scripts -->
-<script src="{{ (env('APP_ENV') === 'local') ? mix('appapp.json) : asset('app.app.json }}" defer></script>
+<script src="{{ (env('APP_ENV') === 'local') ? mix('js/app.js') : asset('js/app.js') }}" defer></script>
 
 </html>

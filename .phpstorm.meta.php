@@ -5,13 +5,16 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2019-06-27 14:23:17.
+    * Generated on 2019-07-20 21:20:16.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
     */
     override(new \Illuminate\Contracts\Container\Container, map([
         '' => '@',
+        'ApiDelivery\Repositories\CategoryRepository' => \ApiDelivery\Repositories\CategoryRepositoryEloquent::class,
+        'ApiDelivery\Repositories\ClientRepository' => \ApiDelivery\Repositories\ClientRepositoryEloquent::class,
+        'ApiDelivery\Repositories\ProductRepository' => \ApiDelivery\Repositories\ProductRepositoryEloquent::class,
         'ApiDelivery\Repositories\UserRepository' => \ApiDelivery\Repositories\UserRepositoryEloquent::class,
         'DaveJamesMiller\Breadcrumbs\BreadcrumbsGenerator' => \DaveJamesMiller\Breadcrumbs\BreadcrumbsGenerator::class,
         'DaveJamesMiller\Breadcrumbs\BreadcrumbsManager' => \DaveJamesMiller\Breadcrumbs\BreadcrumbsManager::class,
@@ -124,6 +127,7 @@ namespace PHPSTORM_META {
         'events' => \Illuminate\Events\Dispatcher::class,
         'files' => \Illuminate\Filesystem\Filesystem::class,
         'filesystem' => \Illuminate\Filesystem\FilesystemManager::class,
+        'filesystem.cloud' => \Illuminate\Filesystem\FilesystemAdapter::class,
         'filesystem.disk' => \Illuminate\Filesystem\FilesystemAdapter::class,
         'flash' => \Laracasts\Flash\FlashNotifier::class,
         'form' => \Collective\Html\FormBuilder::class,
@@ -158,6 +162,9 @@ namespace PHPSTORM_META {
     ]));
     override(\Illuminate\Contracts\Container\Container::make(0), map([
         '' => '@',
+        'ApiDelivery\Repositories\CategoryRepository' => \ApiDelivery\Repositories\CategoryRepositoryEloquent::class,
+        'ApiDelivery\Repositories\ClientRepository' => \ApiDelivery\Repositories\ClientRepositoryEloquent::class,
+        'ApiDelivery\Repositories\ProductRepository' => \ApiDelivery\Repositories\ProductRepositoryEloquent::class,
         'ApiDelivery\Repositories\UserRepository' => \ApiDelivery\Repositories\UserRepositoryEloquent::class,
         'DaveJamesMiller\Breadcrumbs\BreadcrumbsGenerator' => \DaveJamesMiller\Breadcrumbs\BreadcrumbsGenerator::class,
         'DaveJamesMiller\Breadcrumbs\BreadcrumbsManager' => \DaveJamesMiller\Breadcrumbs\BreadcrumbsManager::class,
@@ -270,6 +277,7 @@ namespace PHPSTORM_META {
         'events' => \Illuminate\Events\Dispatcher::class,
         'files' => \Illuminate\Filesystem\Filesystem::class,
         'filesystem' => \Illuminate\Filesystem\FilesystemManager::class,
+        'filesystem.cloud' => \Illuminate\Filesystem\FilesystemAdapter::class,
         'filesystem.disk' => \Illuminate\Filesystem\FilesystemAdapter::class,
         'flash' => \Laracasts\Flash\FlashNotifier::class,
         'form' => \Collective\Html\FormBuilder::class,
@@ -304,6 +312,9 @@ namespace PHPSTORM_META {
     ]));
     override(\Illuminate\Contracts\Container\Container::makeWith(0), map([
         '' => '@',
+        'ApiDelivery\Repositories\CategoryRepository' => \ApiDelivery\Repositories\CategoryRepositoryEloquent::class,
+        'ApiDelivery\Repositories\ClientRepository' => \ApiDelivery\Repositories\ClientRepositoryEloquent::class,
+        'ApiDelivery\Repositories\ProductRepository' => \ApiDelivery\Repositories\ProductRepositoryEloquent::class,
         'ApiDelivery\Repositories\UserRepository' => \ApiDelivery\Repositories\UserRepositoryEloquent::class,
         'DaveJamesMiller\Breadcrumbs\BreadcrumbsGenerator' => \DaveJamesMiller\Breadcrumbs\BreadcrumbsGenerator::class,
         'DaveJamesMiller\Breadcrumbs\BreadcrumbsManager' => \DaveJamesMiller\Breadcrumbs\BreadcrumbsManager::class,
@@ -416,6 +427,7 @@ namespace PHPSTORM_META {
         'events' => \Illuminate\Events\Dispatcher::class,
         'files' => \Illuminate\Filesystem\Filesystem::class,
         'filesystem' => \Illuminate\Filesystem\FilesystemManager::class,
+        'filesystem.cloud' => \Illuminate\Filesystem\FilesystemAdapter::class,
         'filesystem.disk' => \Illuminate\Filesystem\FilesystemAdapter::class,
         'flash' => \Laracasts\Flash\FlashNotifier::class,
         'form' => \Collective\Html\FormBuilder::class,
@@ -450,6 +462,9 @@ namespace PHPSTORM_META {
     ]));
     override(\App::make(0), map([
         '' => '@',
+        'ApiDelivery\Repositories\CategoryRepository' => \ApiDelivery\Repositories\CategoryRepositoryEloquent::class,
+        'ApiDelivery\Repositories\ClientRepository' => \ApiDelivery\Repositories\ClientRepositoryEloquent::class,
+        'ApiDelivery\Repositories\ProductRepository' => \ApiDelivery\Repositories\ProductRepositoryEloquent::class,
         'ApiDelivery\Repositories\UserRepository' => \ApiDelivery\Repositories\UserRepositoryEloquent::class,
         'DaveJamesMiller\Breadcrumbs\BreadcrumbsGenerator' => \DaveJamesMiller\Breadcrumbs\BreadcrumbsGenerator::class,
         'DaveJamesMiller\Breadcrumbs\BreadcrumbsManager' => \DaveJamesMiller\Breadcrumbs\BreadcrumbsManager::class,
@@ -562,6 +577,7 @@ namespace PHPSTORM_META {
         'events' => \Illuminate\Events\Dispatcher::class,
         'files' => \Illuminate\Filesystem\Filesystem::class,
         'filesystem' => \Illuminate\Filesystem\FilesystemManager::class,
+        'filesystem.cloud' => \Illuminate\Filesystem\FilesystemAdapter::class,
         'filesystem.disk' => \Illuminate\Filesystem\FilesystemAdapter::class,
         'flash' => \Laracasts\Flash\FlashNotifier::class,
         'form' => \Collective\Html\FormBuilder::class,
@@ -596,6 +612,9 @@ namespace PHPSTORM_META {
     ]));
     override(\App::makeWith(0), map([
         '' => '@',
+        'ApiDelivery\Repositories\CategoryRepository' => \ApiDelivery\Repositories\CategoryRepositoryEloquent::class,
+        'ApiDelivery\Repositories\ClientRepository' => \ApiDelivery\Repositories\ClientRepositoryEloquent::class,
+        'ApiDelivery\Repositories\ProductRepository' => \ApiDelivery\Repositories\ProductRepositoryEloquent::class,
         'ApiDelivery\Repositories\UserRepository' => \ApiDelivery\Repositories\UserRepositoryEloquent::class,
         'DaveJamesMiller\Breadcrumbs\BreadcrumbsGenerator' => \DaveJamesMiller\Breadcrumbs\BreadcrumbsGenerator::class,
         'DaveJamesMiller\Breadcrumbs\BreadcrumbsManager' => \DaveJamesMiller\Breadcrumbs\BreadcrumbsManager::class,
@@ -708,6 +727,7 @@ namespace PHPSTORM_META {
         'events' => \Illuminate\Events\Dispatcher::class,
         'files' => \Illuminate\Filesystem\Filesystem::class,
         'filesystem' => \Illuminate\Filesystem\FilesystemManager::class,
+        'filesystem.cloud' => \Illuminate\Filesystem\FilesystemAdapter::class,
         'filesystem.disk' => \Illuminate\Filesystem\FilesystemAdapter::class,
         'flash' => \Laracasts\Flash\FlashNotifier::class,
         'form' => \Collective\Html\FormBuilder::class,
@@ -742,6 +762,9 @@ namespace PHPSTORM_META {
     ]));
     override(\app(0), map([
         '' => '@',
+        'ApiDelivery\Repositories\CategoryRepository' => \ApiDelivery\Repositories\CategoryRepositoryEloquent::class,
+        'ApiDelivery\Repositories\ClientRepository' => \ApiDelivery\Repositories\ClientRepositoryEloquent::class,
+        'ApiDelivery\Repositories\ProductRepository' => \ApiDelivery\Repositories\ProductRepositoryEloquent::class,
         'ApiDelivery\Repositories\UserRepository' => \ApiDelivery\Repositories\UserRepositoryEloquent::class,
         'DaveJamesMiller\Breadcrumbs\BreadcrumbsGenerator' => \DaveJamesMiller\Breadcrumbs\BreadcrumbsGenerator::class,
         'DaveJamesMiller\Breadcrumbs\BreadcrumbsManager' => \DaveJamesMiller\Breadcrumbs\BreadcrumbsManager::class,
@@ -854,6 +877,7 @@ namespace PHPSTORM_META {
         'events' => \Illuminate\Events\Dispatcher::class,
         'files' => \Illuminate\Filesystem\Filesystem::class,
         'filesystem' => \Illuminate\Filesystem\FilesystemManager::class,
+        'filesystem.cloud' => \Illuminate\Filesystem\FilesystemAdapter::class,
         'filesystem.disk' => \Illuminate\Filesystem\FilesystemAdapter::class,
         'flash' => \Laracasts\Flash\FlashNotifier::class,
         'form' => \Collective\Html\FormBuilder::class,
@@ -888,6 +912,9 @@ namespace PHPSTORM_META {
     ]));
     override(\resolve(0), map([
         '' => '@',
+        'ApiDelivery\Repositories\CategoryRepository' => \ApiDelivery\Repositories\CategoryRepositoryEloquent::class,
+        'ApiDelivery\Repositories\ClientRepository' => \ApiDelivery\Repositories\ClientRepositoryEloquent::class,
+        'ApiDelivery\Repositories\ProductRepository' => \ApiDelivery\Repositories\ProductRepositoryEloquent::class,
         'ApiDelivery\Repositories\UserRepository' => \ApiDelivery\Repositories\UserRepositoryEloquent::class,
         'DaveJamesMiller\Breadcrumbs\BreadcrumbsGenerator' => \DaveJamesMiller\Breadcrumbs\BreadcrumbsGenerator::class,
         'DaveJamesMiller\Breadcrumbs\BreadcrumbsManager' => \DaveJamesMiller\Breadcrumbs\BreadcrumbsManager::class,
@@ -1000,6 +1027,7 @@ namespace PHPSTORM_META {
         'events' => \Illuminate\Events\Dispatcher::class,
         'files' => \Illuminate\Filesystem\Filesystem::class,
         'filesystem' => \Illuminate\Filesystem\FilesystemManager::class,
+        'filesystem.cloud' => \Illuminate\Filesystem\FilesystemAdapter::class,
         'filesystem.disk' => \Illuminate\Filesystem\FilesystemAdapter::class,
         'flash' => \Laracasts\Flash\FlashNotifier::class,
         'form' => \Collective\Html\FormBuilder::class,

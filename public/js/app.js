@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-/*! AdminLTE app.json
+/*! AdminLTE app.js
 * ================
 * Main JS application file for AdminLTE v2. This file
 * should be included in all pages. It controls some layout
@@ -48029,7 +48029,7 @@ module.exports = function(module) {
 
 /***/ "./resources/js/app.js":
 /*!*****************************!*\
-  !*** ./resources/js/app.json ***!
+  !*** ./resources/js/app.js ***!
   \*****************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -48209,12 +48209,12 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ 0:
 /*!*************************************************************!*\
-  !*** multi ./resources/js/app.json ./resources/sass/app.scss ***!
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ***!
   \*************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\www\api-delivery\resources\js\app.json */"./resources/js/app.json");
+__webpack_require__(/*! C:\www\api-delivery\resources\js\app.js */"./resources/js/app.js");
 module.exports = __webpack_require__(/*! C:\www\api-delivery\resources\sass\app.scss */"./resources/sass/app.scss");
 
 

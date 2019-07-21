@@ -92,4 +92,9 @@ class User extends Authenticatable implements Transformable
         return $this->hasOne(Client::class);
     }
 
+
+    public function orders(){
+        return $this->hasMany(Order::class);
+    }
+
 }

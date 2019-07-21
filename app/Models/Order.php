@@ -7,11 +7,11 @@ use Prettus\Repository\Contracts\Transformable;
 use Prettus\Repository\Traits\TransformableTrait;
 
 /**
- * Class Client.
+ * Class Order.
  *
  * @package namespace ApiDelivery\Models;
  */
-class Client extends Model implements Transformable
+class Order extends Model implements Transformable
 {
     use TransformableTrait;
 
@@ -20,10 +20,13 @@ class Client extends Model implements Transformable
      *
      * @var array
      */
-    protected $fillable = ['type', 'address', 'city', 'state', 'zipcode', 'phone', 'email', 'website', 'status', 'user_id'];
+    protected $fillable = ['status', 'user_id', 'product_id'];
 
     function user(){
         return $this->belongsTo(User::class);
     }
 
+    function product(){
+        return $this->belongsTo(Product::class);
+    }
 }

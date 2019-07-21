@@ -27,7 +27,7 @@ class ProductCreateRequest extends FormRequest
             'name' => 'required',
             'price' => 'required',
             'category_id' => 'required',
-            'image' => 'mimes:jpeg,bmp,png,gif|max:2048'
+            'image' => 'required'
         ];
     }
 }
